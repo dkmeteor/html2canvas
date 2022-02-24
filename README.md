@@ -1,4 +1,7 @@
 html2canvas
+修改在IOS WECHAT 13.X 内置浏览器 生成截图 会卡住的问题.
+注意:此修改后不可使用自定义字体.
+
 ===========
 
 [Homepage](https://html2canvas.hertzen.com) | [Downloads](https://github.com/niklasvh/html2canvas/releases) | [Questions](https://github.com/niklasvh/html2canvas/discussions/categories/q-a)
