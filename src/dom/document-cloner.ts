@@ -112,9 +112,13 @@ export class DocumentCloner {
                 return Promise.reject(`Error finding the ${this.referenceElement.nodeName} in the cloned document`);
             }
 
-            if (documentClone.fonts && documentClone.fonts.ready) {
-                await documentClone.fonts.ready;
-            }
+
+            // ios 13.x  微信内嵌网页会卡死在此处. 移除此代码可正常使用. 
+            // 据说是此处会读取 iOS中 sysytem.UI 造成问题, 未确认 
+            
+            // if (documentClone.fonts && documentClone.fonts.ready) {
+            //     await documentClone.fonts.ready;
+            // }
 
             if (/(AppleWebKit)/g.test(navigator.userAgent)) {
                 await imagesReady(documentClone);
